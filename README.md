@@ -7,14 +7,14 @@ Here I create a Generator function that can generate points from a 2D distributi
 
 View `gan.py` for the code used the create the gif below. If it takes too long to run on your computer, you can run it on google colab.
 
-Description of first gif
+For the just initialised Generator and Discriminator, the networks are producing results all over the place. After about 200 epochs the Generator is producing data that spans the range of the data from our distribution. The orange is the distribution that we hope the Generator will learn. The green is output from the Generator the fooled the Discriminator and the red is output from the Generator that failed to fool the Discriminator.
 
 ![alt text](gan_f_0.gif)
 
-Description of second gif
+Sometimes the Generator gets close to fitting part of our given distribution, but the Discriminator quickly learns where the Generator is generating data and where it isn't. To over come this obstacle, the Generator may have to learn to generate data across the whole target distribution at once instead of incrementally.
 
 ![alt text](gan_f_1800.gif)
 
-Description of third gif
+Even after 4000 epochs, the fight between Generator and Discriminator continue without end in sight. You can see the Generator getting close the approximating the target distribution but the signal from the Discriminator is too noisy.
 
 ![alt text](gan_f_4500.gif)
