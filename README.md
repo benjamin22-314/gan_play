@@ -7,4 +7,14 @@ Here I create a Generator function that can generate points from a 2D distributi
 
 View `gan.py` for the code used the create the gif below. If it takes too long to run on your computer, you can run it on google colab.
 
+Description of first gif
+
 ![alt text](gan_f_0.gif)
+
+Description of second gif
+
+![alt text](gan_f_1800.gif)
+
+Description of third gif
+
+![alt text](gan_f_4500.gif)
