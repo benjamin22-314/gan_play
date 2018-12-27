@@ -13,8 +13,6 @@ For the just initialised Generator and Discriminator, the networks are producing
 
 Sometimes the Generator gets close to fitting part of our given distribution, but the Discriminator quickly learns where the Generator is generating data and where it isn't. To over come this obstacle, the Generator may have to learn to generate data across the whole target distribution at once instead of incrementally.
 
-![alt text](gan_f_1800.gif)
-
 Even after 4000 epochs, the fight between Generator and Discriminator continue without end in sight. You can see the Generator getting close the approximating the target distribution but the signal from the Discriminator is too noisy.
 
 ![alt text](gan_f_4500.gif)
@@ -22,5 +20,9 @@ Even after 4000 epochs, the fight between Generator and Discriminator continue w
 Increasing the random input to the Generator from 1 to 20 changed it's behaviour in an interesting way.
 
 ![alt text](gan_20_inputs.gif)
+
+Increasing the random input from 20 to 100, and the number of nodes on the hidden layers from 100 to 200 (only for the Generator) gives the best model yet. Though it still suffers the problems of the smaller models, that when it learns to approximate only part of the target distribution well, the Discriminator forces the Generator to 'unlearn' that specific part. This gif runs a bit slower than the previous gifs, with several frames shown at each Discriminator step, showing the Discriminator incrementally learning to distinguish between real and generated data.
+
+![alt text](gan_100_inputs3.gif)
 
 <br>
