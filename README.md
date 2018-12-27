@@ -3,9 +3,9 @@
 Ben Phillips
 [Personal Website](https://benjaminphillips22.github.io)
 
-Here I create a Generator function that can generate points from a 2D distribution. In this case, that distribution is a sine wave. To train the Generator, a Discrimitor is also used, which is trained to discern the difference between data from the real distribution and the generatored distribution. This medium [article](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f) by Dev Nag was extremely helpful in understanding and implementing this prject
+I created a Generator network that can generate points from a 2D distribution. In this case, that distribution is a sine wave with added random noise. To train the Generator, a Discriminator is also used, which is trained to discern the difference between data from the real distribution and the generatored distribution. This medium [article](https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f) by Dev Nag was extremely helpful in understanding and implementing this project
 
-View `gan.py` for the code used the create the gif below. If it takes too long to run on your computer, you can run it on google colab.
+View `gan.py` for the code used the create the gifs below. If it takes too long to run on your computer, you can run it on google colab.
 
 For the just initialised Generator and Discriminator, the networks are producing results all over the place. After about 200 epochs the Generator is producing data that spans the range of the data from our distribution. The orange is the distribution that we hope the Generator will learn. The green is output from the Generator the fooled the Discriminator and the red is output from the Generator that failed to fool the Discriminator.
 
@@ -18,3 +18,9 @@ Sometimes the Generator gets close to fitting part of our given distribution, bu
 Even after 4000 epochs, the fight between Generator and Discriminator continue without end in sight. You can see the Generator getting close the approximating the target distribution but the signal from the Discriminator is too noisy.
 
 ![alt text](gan_f_4500.gif)
+
+Increasing the random input to the Generator from 1 to 20 changed it's behaviour in an interesting way.
+
+![alt text](gan_20_inputs.gif)
+
+<br>
